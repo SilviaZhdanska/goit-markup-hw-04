@@ -47,8 +47,12 @@ img {
   padding-top: 120px;
 }
 
+/* ================HEADER========================== */
+
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -137,6 +141,8 @@ img {
   color: #404bbf;
 }
 
+/* ============================HERO===================================== */
+
 .hero-section {
   background-color: #2e2f42;
   padding-top: 188px;
@@ -148,6 +154,8 @@ img {
     url(../images/heroimage.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  max-width: 1440px;
+  background-size: cover;
 }
 
 .hero-text {
@@ -177,12 +185,15 @@ img {
   height: 56px;
   border: none;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:hover,
 .order-button:focus {
   background-color: #404bbf;
 }
+
+/* ======================MAIN================================== */
 
 .visually-hidden {
   position: absolute;
@@ -205,9 +216,21 @@ img {
   flex-basis: calc((100% - 72px) / 4);
 }
 
+.main-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  margin-bottom: 8px;
+}
+
 .icon {
   fill: transparent;
 }
+
 .main-title {
   font-weight: 500;
   font-size: 20px;
@@ -224,6 +247,8 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
 }
+
+/* ======================TEAM==================================== */
 
 .team-section {
   background-color: #f4f4fd;
@@ -243,6 +268,8 @@ img {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   width: calc((100% - 72px) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-title-name {
@@ -298,52 +325,26 @@ img {
   margin-top: 8px;
 }
 
+.social-media {
+}
+
 .sm-link {
   display: flex;
   width: 40px;
   height: 40px;
+
   align-items: center;
   justify-content: center;
   background-color: #4d5ae5;
   border-radius: 50%;
 }
 
-.sm-link:hover {
+.sm-link:hover,
+.sm-link:focus {
   background-color: #404bbf;
 }
 
-.box {
-  position: relative;
-  width: 360px;
-  height: 300px;
-
-  overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #4d5ae5;
-
-  transform: translateX(-100%);
-  transition: property 250ms ease-in-out;
-}
-
-.box:hover .overlay {
-  transform: translateX(0);
-}
-
-.overlay p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
-  margin: 40px 32px 164px 32px;
-}
+/* =======================PORTFOLIO===================================== */
 
 .portfolio {
   font-weight: 700;
@@ -365,6 +366,32 @@ img {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: ;
+}
+
+.portfolio-list-item:hover {
+  box-shadow: px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card-text {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-container {
@@ -389,6 +416,17 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+}
+
+/* ==========================FOOTER================================== */
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-logo-container {
+  margin-right: 120px;
 }
 
 .footer {
@@ -427,10 +465,37 @@ img {
   fill: transparent;
 }
 
+.footer-sm {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
 .footer-sm-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-sm-item {
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-sm-link {
+  width: 100%;
+  height: 100%;
   background-color: #4d5ae5;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-sm-link:hover,
+.footer-sm-link:focus {
+  background-color: #31d0aa;
 }
